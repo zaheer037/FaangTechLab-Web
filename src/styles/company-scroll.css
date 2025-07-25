@@ -1,0 +1,56 @@
+@keyframes scroll-companies {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-company-scroll {
+  animation: scroll-companies 30s linear infinite;
+}
+
+.animate-company-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Video carousel optimizations */
+.video-carousel-container {
+  overflow: hidden;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
+}
+
+.video-carousel-scroll {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.video-item {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smooth transitions for video hover effects */
+.video-item:hover {
+  transform: translateZ(0) scale(1.02);
+}
+
+/* Hardware acceleration for modal */
+.video-modal {
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Optimize video rendering */
+video {
+  will-change: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
